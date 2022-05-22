@@ -50,7 +50,6 @@ function App() {
 
         
         axios.request(MoviesPopular2).then(function (response) {
-          const maisFilmes: MoviesCollection[] = response.data.results
           
           for(let i=0; i<20; i++){
             mvs.push(filmes[i])
@@ -124,21 +123,21 @@ function App() {
       mvs = []
     }
 
-  const getMoviePopular = () =>{
+  // const getMoviePopular = () =>{
       
-    mvs = []
+  //   mvs = []
 
-    axios.request(MoviesPopular).then(function (response) {
-      var data: never[] = response.data.results
-      // console.log(data);
+  //   axios.request(MoviesPopular).then(function (response) {
+  //     var data: never[] = response.data.results
+  //     // console.log(data);
       
-      for(let i = 0; i < 20; i++){
-        mvs.push(data[i])
-      }
-    })
+  //     for(let i = 0; i < 20; i++){
+  //       mvs.push(data[i])
+  //     }
+  //   })
     
-    getOthers()
-  }
+  //   getOthers()
+  // }
 
   
 
